@@ -650,8 +650,8 @@
         \node {$S$}
             child {node {\texttt{x}}}
             child {node {\texttt{=}}}
-            child {node {$E.addr = \texttt{t9}$}
-                child {node[below]{\shortstack{$L.array = \texttt{a}$ \\ $L.type = integer$ \\ $L.addr = \texttt{t8}$}}
+            child {node {$E.addr = \texttt{t10}$}
+                child {node[below]{\shortstack{$L.array = \texttt{a}$ \\ $L.type = integer$ \\ $L.addr = \texttt{t9}$}}
                     child {node[below left]{\shortstack{$L.array = \texttt{a}$ \\ $L.type = array(width_a, integer)$ \\ $L.addr = \texttt{t5}$}}
                         child {node[below left=]{\shortstack{$\texttt{a}.type =$ \\ $array(height_a, array(width_a, integer))$}}}
                         child {node[below]{\texttt{[}}}
@@ -706,9 +706,10 @@ t4 = b[t3]
 t5 = t4 * 4width_a
 t6 = k * 4
 t7 = c[t6]
-t8 = t5 + t7
-t9 = a[t8]
-x = t9
+t8 = t7 * 4
+t9 = t5 + t8
+t10 = a[t9]
+x = t10
 \end{lstlisting}
 \end{enumerate}
 
